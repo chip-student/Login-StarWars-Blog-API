@@ -143,7 +143,7 @@ def get_user_fav(id):
 def add_fav(id):
 
     request_body=request.get_json()
-    fav = Person(idpeople=request_body["idpeople"], iduser=id, idplanet=request_body["idplanet"])
+    fav = Favorites(idpeople=request_body["idpeople"], iduser=id, idplanet=request_body["idplanet"])
     db.session.add(fav)
     db.session.commit()
 
